@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "all_ccounts")
+@Table(name = "all_accounts")
 public class Account 
 {
 
 	@Id
-	@Column(name = "account_number", unique = true, nullable = false)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "account_number", nullable = false)
 	private String accountNumber;
 
 	@Column(name = "Account_holder", nullable = false)

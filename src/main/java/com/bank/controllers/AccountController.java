@@ -18,17 +18,11 @@ public class AccountController
 	@Autowired
 	private final AccountService accountService;
 
-	@GetMapping
-	public List<Account> getAllAccounts() 
-	{
-		return accountService.getAllAccounts();
-	}
-
 	public AccountController(AccountService accountService) 
 	{
 		this.accountService = accountService;
 	}
-
+//-------------------------------------------------------------------------------------------------------------------------
 	@PostMapping("/add")
 	public ResponseEntity<Account> addAccount(@RequestBody Account account) 
 	{
@@ -42,15 +36,16 @@ public class AccountController
 		return deleted ? ResponseEntity.ok("Account deleted successfully!") :
 			ResponseEntity.badRequest().body("Account not found!");
 	}
-
+//-------------------------------------------------------------------------------------------------------------------------
 	@GetMapping("/{accountNumber}")
 	public ResponseEntity<Optional<Account>> getAccount(@PathVariable String accountNumber) 
 	{
 		return ResponseEntity.ok(accountService.getAccountByNumber(accountNumber));
 	}
-
-	//    @GetMapping("/all")
-	//    public ResponseEntity<List<Account>> getAllAccounts() {
-	//        return ResponseEntity.ok(accountService.getAllAccounts());
-	//    }
+//-------------------------------------------------------------------------------------------------------------------------
+	@GetMapping("/all")
+	public ResponseEntity<List<Account>> getAllAccounts() 
+	{
+		return ResponseEntity.ok(accountService.getAllAccounts());
+	}
 }
