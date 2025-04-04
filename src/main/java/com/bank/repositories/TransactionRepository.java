@@ -8,6 +8,5 @@ import java.util.List;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 {
-    //  Fixed method name: Use accountNumber instead of accountId
     List<Transaction> findByAccountNumber(String accountNumber);
 }

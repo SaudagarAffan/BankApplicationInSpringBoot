@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Manage Accounts</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <h1>Manage Your Accounts</h1>
+        <div id="accountActions">
+            <div>
+                <h2>Add New Account</h2>
+                <input type="text" id="accountNumber" placeholder="Account Number">
+                <input type="text" id="accountHolder" placeholder="Account Holder">
+                <input type="number" id="initialBalance" placeholder="Initial Balance">
+                <button onclick="addAccount()">Add Account</button>
+            </div>
+
+            <div>
+                <h2>Delete Account</h2>
+                <input type="number" id="deleteAccountNumber" placeholder="Account Number">
+                <button onclick="deleteAccount()">Delete Account</button>
+            </div>
+
+            <div>
+                <h2>Check Balance</h2>
+                <input type="number" id="balanceAccountNumber" placeholder="Account Number">
+                <button onclick="checkBalance()">Check Balance</button>
+                <div id="balanceResult"></div>
+            </div>
+
+        </div>
+    </body>
+</html>

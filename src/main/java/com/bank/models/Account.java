@@ -9,7 +9,6 @@ public class Account
 {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "account_number", nullable = false)
 	private String accountNumber;
 
@@ -27,7 +26,7 @@ public class Account
 		this.accountHolder = accountHolder;
 		this.balance = balance;
 	}
-
+//-------------------------------------------------------------------------------------------------------------------------
 	public String getAccountNumber() { return accountNumber; }
 	public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
 

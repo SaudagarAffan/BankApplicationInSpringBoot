@@ -14,7 +14,7 @@ public class Transaction
 	private Long transactionid;
 
 	@Column(nullable = false)
-	private String accountNumber;  // Changed from Account object to String
+	private String accountNumber;   
 
 	private String transactionType; // DEPOSIT or WITHDRAW
 
@@ -32,8 +32,8 @@ public class Transaction
 		this.amount = amount;
 		this.dateTime = dateTime;
 	}
-
-	// Getters and Setters
+//-------------------------------------------------------------------------------------------------------------------------
+	// Provide public Getters and Setters
 	public Long getTransactionid() { return transactionid; }
 	public void setTransactionid(Long transactionid) { this.transactionid = transactionid; }
 

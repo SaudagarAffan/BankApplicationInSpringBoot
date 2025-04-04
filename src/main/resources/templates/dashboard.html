@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+	
+	   <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body style="
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.livemint.com/lm-img/img/2024/11/20/600x338/investment_1731737985428_1732085725109.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+">
+    <h1 style="color: white;">Dashboard</h1>
+    <p><h1 style="color: white;"> Welcome to your account dashboard </h1></p>
+
+    <button id="fetchAccounts">Show All Accounts</button>
+	<button id="hideAccounts" style="display: none;">Hide Accounts</button>
+	<div id="accountContainer" style="display: none;"></div>
+
+    <table border="1" style="color: white;">
+        <thead>
+            <tr style="color: white;">
+                <th>Account Number</th>
+                <th>Account Holder</th>
+                <th>Balance</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="accountsTable" style="color: white;"></tbody>
+    </table>
+	
+
+    <h2 style="color: white;">Add New Account</h2>
+    <input type="text" id="accountNumber" placeholder="Account Number">
+    <input type="text" id="accountHolder" placeholder="Account Holder">
+    <input type="number" id="balance" placeholder="Balance">
+    <button id="addAccount">Add Account</button>
+</body>
+</html>
