@@ -21,7 +21,7 @@ public class TransactionService
 		this.transactionRepository = transactionRepository;
 		this.accountRepository = accountRepository;
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public String performTransaction(String accountNumber, String type, BigDecimal amount) 
 	{
 		Optional<Account> accountOpt = accountRepository.findByAccountNumber(accountNumber);
@@ -54,7 +54,7 @@ public class TransactionService
 
 		return "Transaction successful!";
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public List<Transaction> getTransactionHistory(String accountNumber) 
 	{
 		return transactionRepository.findByAccountNumber(accountNumber);

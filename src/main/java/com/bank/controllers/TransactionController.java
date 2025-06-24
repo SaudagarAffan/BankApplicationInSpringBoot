@@ -24,7 +24,7 @@ public class TransactionController
 	{
 		return transactionService.performTransaction(accountNumber, type, amount);
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+	
 	@GetMapping("/history/{accountNumber}")
 	public List<Transaction> getTransactionHistory(@PathVariable String accountNumber) 
 	{

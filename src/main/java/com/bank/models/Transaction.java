@@ -1,6 +1,6 @@
 package com.bank.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.*; 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -16,7 +16,7 @@ public class Transaction
 	@Column(nullable = false)
 	private String accountNumber;   
 
-	private String transactionType; // DEPOSIT or WITHDRAW
+	private String transactionType; 
 
 	private BigDecimal amount;
 
@@ -24,7 +24,6 @@ public class Transaction
 
 	public Transaction() {}
 
-	//  Updated constructor to use accountNumber instead of Account object
 	public Transaction(String accountNumber, String transactionType, BigDecimal amount, LocalDateTime dateTime) 
 	{
 		this.accountNumber = accountNumber;
@@ -32,8 +31,7 @@ public class Transaction
 		this.amount = amount;
 		this.dateTime = dateTime;
 	}
-//-------------------------------------------------------------------------------------------------------------------------
-	// Provide public Getters and Setters
+	
 	public Long getTransactionid() { return transactionid; }
 	public void setTransactionid(Long transactionid) { this.transactionid = transactionid; }
 

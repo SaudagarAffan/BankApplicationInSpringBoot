@@ -19,12 +19,12 @@ public class AccountService
 	{
 		return accountRepository.save(account);
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public Optional<Account> getAccountByNumber(String accountNumber) 
 	{
 		return accountRepository.findByAccountNumber(accountNumber);
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public boolean deleteAccount(String accountNumber) 
 	{
 		Optional<Account> account = accountRepository.findByAccountNumber(accountNumber);
@@ -35,7 +35,7 @@ public class AccountService
 		}
 		return false;
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public boolean updateBalance(String accountNumber, BigDecimal amount) 
 	{
 		Optional<Account> accountOpt = accountRepository.findByAccountNumber(accountNumber);
@@ -48,7 +48,7 @@ public class AccountService
 		}
 		return false;
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	public List<Account> getAllAccounts() 
 	{
 		return accountRepository.findAll();

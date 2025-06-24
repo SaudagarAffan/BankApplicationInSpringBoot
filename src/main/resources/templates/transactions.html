@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Transactions</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Manage Transactions</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>Manage Transactions</h1>
+	<h1>Manage Transactions</h1>
 
-    <h2>Deposit Money</h2>
-    <input type="text" id="depositAccountNumber" placeholder="Account Number">
-    <input type="number" id="depositAmount" placeholder="Amount">
-    <button onclick="depositMoney()">Deposit</button>
+	<h2>Deposit Money</h2>
+	<input type="text" id="depositAccountNumber" placeholder="Account Number">
+	<input type="number" id="depositAmount" placeholder="Amount">
+	<button onclick="depositMoney()">Deposit</button>
 
-    <h2>Withdraw Money</h2>
-    <input type="text" id="withdrawAccountNumber" placeholder="Account Number">
-    <input type="number" id="withdrawAmount" placeholder="Amount">
-    <button onclick="withdrawMoney()">Withdraw</button>
+	<h2>Withdraw Money</h2>
+	<input type="text" id="withdrawAccountNumber" placeholder="Account Number">
+	<input type="number" id="withdrawAmount" placeholder="Amount">
+	<button onclick="withdrawMoney()">Withdraw</button>
 
-    <h2>Transaction History</h2>
-    <input type="text" id="historyAccountNumber" placeholder="Account Number">
-    <button onclick="getTransactionHistory()">View</button>
-    <div id="historyResult"></div>
+	<h2>Transaction History</h2>
+	<input type="text" id="historyAccountNumber" placeholder="Account Number">
+	<button onclick="getTransactionHistory()">View</button>
+	<div id="historyResult"></div>
+
 </body>
+
 </html>

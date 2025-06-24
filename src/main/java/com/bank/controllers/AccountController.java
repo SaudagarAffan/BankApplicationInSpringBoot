@@ -22,13 +22,13 @@ public class AccountController
 	{
 		this.accountService = accountService;
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	@PostMapping("/add")
 	public ResponseEntity<Account> addAccount(@RequestBody Account account) 
 	{
 		return ResponseEntity.ok(accountService.addAccount(account));
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	@DeleteMapping("/delete/{accountNumber}")
 	public ResponseEntity<String> deleteAccount(@PathVariable String accountNumber) 
 	{
@@ -36,13 +36,13 @@ public class AccountController
 		return deleted ? ResponseEntity.ok("Account deleted successfully!") :
 			ResponseEntity.badRequest().body("Account not found!");
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	@GetMapping("/{accountNumber}")
 	public ResponseEntity<Optional<Account>> getAccount(@PathVariable String accountNumber) 
 	{
 		return ResponseEntity.ok(accountService.getAccountByNumber(accountNumber));
 	}
-//-------------------------------------------------------------------------------------------------------------------------
+
 	@GetMapping("/all")
 	public ResponseEntity<List<Account>> getAllAccounts() 
 	{
