@@ -20,4 +20,9 @@ public class GlobalExceptionHandler
 	{
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
 	}
+
+	@ExceptionHandler(AccountAlreadyExistsException.class)
+	public ResponseEntity<String> handleAccountExists(AccountAlreadyExistsException ex) {
+	    return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
+	}
 }

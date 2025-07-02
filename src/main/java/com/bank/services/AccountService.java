@@ -1,5 +1,6 @@
 package com.bank.services;
 
+import com.bank.demo.exception.AccountAlreadyExistsException;
 import com.bank.models.Account; 
 import com.bank.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,13 @@ public class AccountService
 
 	public Account addAccount(Account account) 
 	{
-		return accountRepository.save(account);
-	}
+        Optional<Account> existing = accountRepository.findByAccountNumber(account.getAccountNumber());
+        if (existing.isPresent()) 
+        {
+            throw new AccountAlreadyExistsException("Account number already exists.");
+        }
+        return accountRepository.save(account);
+    }
 
 	public Optional<Account> getAccountByNumber(String accountNumber) 
 	{
